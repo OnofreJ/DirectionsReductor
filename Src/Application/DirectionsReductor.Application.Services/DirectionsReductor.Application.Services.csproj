@@ -4,4 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\DirectionsReductor.Infrastructure.CrossCutting\DirectionsReductor.Infrastructure.CrossCutting.csproj" />
+  </ItemGroup>
 </Project>

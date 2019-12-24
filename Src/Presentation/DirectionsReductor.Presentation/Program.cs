@@ -1,50 +1,63 @@
 ﻿namespace DirectionsReductor.Presentation
 {
-    using DirectionsReductor.Application.Services;
     using System;
 
     internal class Program
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Write your direction:");
-            var directions = new string[] { "NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST" };
+            var exit = false;
 
-            var reducerService = new ReducerService();
-
-            foreach (var item in reducerService.Reduce(directions))
+            while (exit == false)
             {
-                Console.Write(item + " ");
-            }
-            Console.WriteLine("");
+                Console.WriteLine("Welcome to the ROUTE REDUCTION SYSTEM! Please enter the route to see if it can be shortened.");
+                Console.WriteLine("Values entered must be delimited by commas(,).Example:");
+                Console.WriteLine("North, East, South.");
 
-            directions = new string[] { "NORTH", "SOUTH", "EAST", "WEST" };
-            foreach (var item in reducerService.Reduce(directions))
-            {
-                Console.Write(item + " ");
-            }
-            Console.WriteLine("");
+                Console.WriteLine();
 
-            directions = new string[] { "NORTH", "EAST", "WEST", "SOUTH", "WEST", "WEST" };
-            foreach (var item in reducerService.Reduce(directions))
-            {
-                Console.Write(item + " ");
+                exit = Convert.ToBoolean(Console.ReadLine());
+                Console.Clear();
             }
-            Console.WriteLine("");
 
-            directions = new string[] { "NORTH", "WEST", "SOUTH", "EAST" };
-            foreach (var item in reducerService.Reduce(directions))
-            {
-                Console.Write(item + " ");
-            }
-            Console.WriteLine("");
+            //Console.WriteLine("Write your direction:");
+            //var directions = new string[] { "NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST" };
 
-            directions = new string[] { "NORTH", "WEST" };
-            foreach (var item in reducerService.Reduce(directions))
-            {
-                Console.Write(item + " ");
-            }
-            Console.WriteLine("");
+            //var reducerService = new ReducerService();
+
+            //foreach (var item in reducerService.Reduce(directions))
+            //{
+            //    Console.Write(item + " ");
+            //}
+            //Console.WriteLine("");
+
+            //directions = new string[] { "NORTH", "SOUTH", "EAST", "WEST" };
+            //foreach (var item in reducerService.Reduce(directions))
+            //{
+            //    Console.Write(item + " ");
+            //}
+            //Console.WriteLine("");
+
+            //directions = new string[] { "NORTH", "EAST", "WEST", "SOUTH", "WEST", "WEST" };
+            //foreach (var item in reducerService.Reduce(directions))
+            //{
+            //    Console.Write(item + " ");
+            //}
+            //Console.WriteLine("");
+
+            //directions = new string[] { "NORTH", "WEST", "SOUTH", "EAST" };
+            //foreach (var item in reducerService.Reduce(directions))
+            //{
+            //    Console.Write(item + " ");
+            //}
+            //Console.WriteLine("");
+
+            //directions = new string[] { "NORTH", "WEST" };
+            //foreach (var item in reducerService.Reduce(directions))
+            //{
+            //    Console.Write(item + " ");
+            //}
+            //Console.WriteLine("");
         }
     }
 }
