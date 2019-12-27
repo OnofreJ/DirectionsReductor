@@ -31,13 +31,12 @@
             Console.WriteLine("******************************************");
             Console.WriteLine("Please enter the route to see if it can be shortened.");
             Console.WriteLine("Values entered must be delimited by commas(,).Example: North, East, South");
-            Console.Write("Enter your route: ");
         }
 
         private static void StartApplication(IServiceProvider serviceProvider)
         {
             var exit = false;
-
+            var errorMessage = string.Empty;
             var reducerService = serviceProvider.GetService<IReducerService>();
 
             while (!exit)
@@ -46,8 +45,14 @@
                 {
                     PrintWelcomeMessage();
 
-                    var directions = Console.ReadLine().ToUpper().Split(',');
+                    if (!string.IsNullOrEmpty(errorMessage))
+                    {
+                        Console.WriteLine(errorMessage);
+                    }
 
+                    Console.Write("Enter your route: ");
+
+                    var directions = Console.ReadLine().Split(',');
                     var reducedDirections = reducerService.Reduce(directions.ToList());
 
                     Console.Write("Your direction has been reduced to: ");
@@ -58,12 +63,14 @@
                     Console.WriteLine("Exit? (Y/N)");
 
                     exit = Console.ReadLine().ToUpper().Trim() == "Y";
+                    errorMessage = string.Empty;
 
                     Console.Clear();
                 }
                 catch (Exception exception)
                 {
-                    Console.WriteLine($"Oops! Something went wrong - {exception.Message}.");
+                    errorMessage = $"Oops! Something went wrong - {exception.Message}";
+                    Console.Clear();
                 }
             }
 

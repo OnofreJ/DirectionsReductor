@@ -4,13 +4,13 @@
 
     public static class ServiceConstants
     {
-        public static readonly string East = "EAST";
+        private static readonly string East = "EAST";
 
-        public static readonly string North = "NORTH";
+        private static readonly string North = "NORTH";
 
-        public static readonly string South = "SOUTH";
+        private static readonly string South = "SOUTH";
 
-        public static readonly string West = "WEST";
+        private static readonly string West = "WEST";
 
         public static Dictionary<string, string> ReducibleDirections { get; } = new Dictionary<string, string> {
             { North, South },
