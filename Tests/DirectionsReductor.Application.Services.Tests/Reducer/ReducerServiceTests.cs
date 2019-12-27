@@ -37,7 +37,7 @@
             // Arrange
             var directions = fixture.CreateMany<string>();
 
-            // Assert
+            // Act & Assert
             Assert.Throws<KeyNotFoundException>(() => reducerService.Reduce(directions.ToList()));
         }
 
