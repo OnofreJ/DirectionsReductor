@@ -1,8 +1,8 @@
-﻿namespace DirectionsReductor.Infrastructure.CrossCutting
+﻿namespace DirectionsReductor.Application.Services
 {
     using System.Collections.Generic;
 
-    public static class Constants
+    public static class ServiceConstants
     {
         public static readonly string East = "EAST";
 
