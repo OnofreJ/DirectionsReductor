@@ -5,6 +5,7 @@
     using DirectionsReductor.Application.Services.Validation;
     using FluentAssertions;
     using NSubstitute;
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using Xunit;
@@ -24,16 +25,20 @@
         }
 
         [Fact]
+        public void Reduce_InvalidInputDirections_ThrowsArgumentNullException()
+        {
+            // Act & Assert
+            Assert.Throws<ArgumentNullException>(() => reducerService.Reduce(null));
+        }
+
+        [Fact]
         public void Reduce_InvalidInputDirections_ThrowsException()
         {
             // Arrange
             var directions = fixture.CreateMany<string>();
 
-            // Act
-            var result = reducerService.Reduce(directions.ToList());
-
             // Assert
-            Assert.Throws<System.Collections.Generic.KeyNotFoundException>(() => reducerService.Reduce(directions.ToList()));
+            Assert.Throws<KeyNotFoundException>(() => reducerService.Reduce(directions.ToList()));
         }
 
         [Fact]

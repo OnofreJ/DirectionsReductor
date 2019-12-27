@@ -4,7 +4,9 @@
     using DirectionsReductor.Application.Services.Validation;
     using Microsoft.Extensions.DependencyInjection;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
 
+    [ExcludeFromCodeCoverage]
     public static class ServiceExtensions
     {
         public static IServiceCollection AddServices(this IServiceCollection services)
