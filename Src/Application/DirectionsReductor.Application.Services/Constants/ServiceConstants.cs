@@ -1,4 +1,4 @@
-﻿namespace DirectionsReductor.Application.Services
+﻿namespace DirectionsReductor.Application.Services.Constants
 {
     using System.Collections.Generic;
 
@@ -12,7 +12,7 @@
 
         public static readonly string West = "WEST";
 
-        public static Dictionary<string, string> ReducibleDirections = new Dictionary<string, string> {
+        public static Dictionary<string, string> ReducibleDirections { get; } = new Dictionary<string, string> {
             { North, South },
             { South, North },
             { East, West },

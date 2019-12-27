@@ -6,7 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Application\DirectionsReductor.Application.Services\DirectionsReductor.Application.Services.csproj" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\DirectionsReductor.Application.Services\DirectionsReductor.Application.Services.csproj" />
+  </ItemGroup>
 </Project>
