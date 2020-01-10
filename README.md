@@ -1,6 +1,6 @@
 # DirectionsReductor
 
-[![AppVeyor]](https://ci.appveyor.com/project/OnofreJ/directionsreductor/branch/master)
+[https://ci.appveyor.com/api/projects/status/i4fyskudj4uw6y2o?svg=true](https://ci.appveyor.com/api/projects/status/i4fyskudj4uw6y2o?svg=true)
 
 This project aims to solve the problem presented in the exercise "ONCE UPON A TIME, ON A WAY THROUGH THE OLD WILD WEST, …".
 
