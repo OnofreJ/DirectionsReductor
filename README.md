@@ -8,3 +8,5 @@ This project aims to solve the problem presented in the exercise "ONCE UPON A TI
 All commit messages followed the standards set in:
 
 https://www.conventionalcommits.org/en/v1.0.0-beta.2/
+
+[![codecov](https://codecov.io/gh/codecov/example-csharp/branch/master/graph/badge.svg)](https://codecov.io/gh/codecov/example-csharp)
