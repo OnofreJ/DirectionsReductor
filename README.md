@@ -2,6 +2,8 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/github/OnofreJ/directionsreductor?svg=true)](https://ci.appveyor.com/api/projects/status/github/OnofreJ/directionsreductor)
 [![Coverage Status](https://coveralls.io/repos/github/OnofreJ/DirectionsReductor/badge.svg?branch=master)](https://coveralls.io/github/OnofreJ/DirectionsReductor?branch=master)
+[![Tests Status](https://img.shields.io/appveyor/tests/Onofrej/DirectionsReductor/master)](https://img.shields.io/appveyor/tests/Onofrej/DirectionsReductor/master)
+
 
 This project aims to solve the problem presented in the exercise "ONCE UPON A TIME, ON A WAY THROUGH THE OLD WILD WEST, …".
 
